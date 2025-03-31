@@ -29,7 +29,7 @@ payoff_matrix = np.zeros((n_strategies, n_strategies))
 for i, d_strategy in enumerate(strategies):
     for j, r_strategy in enumerate(strategies):
         net_score = 0
-        for k in range(7):  # 遍历7个州
+        for k in range(7):  # Go through all 7 states
             if d_strategy[k] > r_strategy[k]:
                 net_score += state_votes[k]
             elif d_strategy[k] < r_strategy[k]:
